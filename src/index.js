@@ -1,5 +1,6 @@
 import { cars } from './cars.js';
 
+// --- data models ---
 let items = cars;
 let basket = [];
 
@@ -35,7 +36,12 @@ const renderCars = () => {
 };
 
 const viewItem = (model) => {
-  instance.element().querySelector('.model').textContent = model;
+  const item = items.find((item) => item.model === model);
+
+  instance
+    .element()
+    .querySelector('.model').textContent = `${model} - ${item.price}$`;
+
   instance.show();
 };
 
@@ -53,8 +59,9 @@ const handleItemClick = (e) => {
   if (e.target === e.currentTarget) return;
 
   const parent = e.target.closest('li');
-  const action = e.target.dataset.name; // view, buy, delete
   const model = parent.dataset.model;
+
+  const action = e.target.dataset.name; // view, buy, delete
 
   switch (action) {
     case 'view':
