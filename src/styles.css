@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+li {
+  display: flex;
+  column-gap: 10px;
+  background-color: antiquewhite;
+  padding: 5px;
+}
+
+li span {
+  width: 120px;
+}
+
+button[data-name='delete'] {
+  background-color: rgb(255, 184, 184);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[data-name='delete']:hover {
+  background-color: rgb(249, 171, 171);
+}
+
+button[data-name='view'] {
+  background-color: rgb(159, 203, 168);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[data-name='view']:hover {
+  background-color: rgb(134, 180, 143);
+}
+
+button[data-name='buy'] {
+  background-color: rgb(233, 233, 184);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[data-name='buy']:hover {
+  background-color: rgb(210, 210, 166);
+}
+
+.modal {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+}
