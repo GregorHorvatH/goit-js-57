@@ -5,7 +5,8 @@ let items = cars;
 let basket = [];
 
 // --- templates ---
-const carTemplate = ({ make, model }) => `<li data-model="${model}">
+const carTemplate = ({ make, model }) => `
+<li data-model="${model}">
   <span>${make} - ${model}</span>
   <button data-name="view">view</button>
   <button data-name="buy">buy</button>
