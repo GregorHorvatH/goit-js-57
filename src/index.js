@@ -4,6 +4,7 @@ import { cars } from './cars.js';
 let items = cars;
 let basket = [];
 
+// --- templates ---
 const carTemplate = ({ make, model }) => `<li data-model="${model}">
   <span>${make} - ${model}</span>
   <button data-name="view">view</button>
@@ -17,11 +18,13 @@ const instance = basicLightbox.create(`
   <button>close</button>
 </div>`);
 
+// --- references ---
 const refs = {
   basketValue: document.querySelector('.basket-value'),
   carsList: document.querySelector('.cars-list'),
 };
 
+// --- functions ---
 const renderBasket = () => {
   refs.basketValue.textContent = basket.length;
 
@@ -78,8 +81,10 @@ const handleItemClick = (e) => {
   }
 };
 
+// --- first render ---
 renderCars();
 
+// --- add event listeners ---
 refs.carsList.addEventListener('click', handleItemClick);
 
 instance
